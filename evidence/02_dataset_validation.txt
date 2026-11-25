@@ -1,0 +1,12 @@
+Source: Kaggle e-commerce product dataset
+Source URL: https://www.kaggle.com/code/damerajee/ecommerce-product-dataset/input
+Original format: Excel
+Storage: Local filesystem
+Normalized batches: products_v1.csv, products_v2.csv, products_v3.csv
+
+Dataset inspection:
+Rows: 30000
+Columns: 18
+Missing pid: 0
+Duplicate pid: 1920
+Unique pid: 28080

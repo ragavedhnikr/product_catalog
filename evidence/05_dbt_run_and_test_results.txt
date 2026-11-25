@@ -1,0 +1,216 @@
+dbt_run_staging:
+::group::Log message source details
+/opt/airflow/logs/dag_id=product_catalog_etl/run_id=manual__2026-11-24T09:08:28.284953+00:00/task_id=dbt_run_staging/attempt=1.log
+::endgroup::
+[2026-11-24T09:08:39.305763Z] INFO - ::group::Pre Execute
+Task Identity ti_id=01a20cd0-501a-7f3c-9419-f65e007af7ec
+[2026-11-24T09:08:39.314080Z] INFO - DAG bundles loaded: dags-folder, example_dags, apache-airflow-providers-common-sql-example-dags, apache-airflow-providers-standard-example-dags
+[2026-11-24T09:08:39.314608Z] INFO - Filling up the DagBag from /opt/airflow/dags/product_catalog_etl.py
+[2026-11-24T09:08:39.318776Z] INFO - Worker startup parse complete bundle_name=dags-folder  bundle_version=null  dag_file=product_catalog_etl.py  bundle_prepare_ms=0  dag_file_parse_ms=4 
+[2026-11-24T09:08:39.327837Z] INFO - Task instance is in running state
+[2026-11-24T09:08:39.327907Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUED
+[2026-11-24T09:08:39.328308Z] INFO - Current task name:dbt_run_staging
+[2026-11-24T09:08:39.328364Z] INFO - Dag name:product_catalog_etl
+[2026-11-24T09:08:39.328362Z] INFO - ::endgroup::
+[2026-11-24T09:08:39.328746Z] INFO - Tmp dir root location: /tmp
+[2026-11-24T09:08:39.329069Z] INFO - Running command: ['/usr/python/bin/bash', '-c', 'set -euo pipefail\n/opt/airflow/dbt_venv/bin/dbt run --project-dir /opt/airflow/dbt/product_catalog --profiles-dir /opt/airflow/config --select stg_products']
+[2026-11-24T09:08:39.329540Z] INFO - Output:
+[2026-11-24T09:08:39.417691Z] INFO -        dbt 2.0.12
+[2026-11-24T09:08:39.418604Z] INFO -    Loading ../../config/profiles.yml
+[2026-11-24T09:08:39.426559Z] INFO -    Loading packages.yml
+[2026-11-24T09:08:42.107544Z] INFO -  Succeeded model STAGING.stg_products (view) [1 of 1 in 0.70s]
+[2026-11-24T09:08:42.281849Z] INFO - 
+[2026-11-24T09:08:42.281938Z] INFO - ==================== Execution Summary =====================
+[2026-11-24T09:08:42.281961Z] INFO - Finished 'run' successfully for target 'dev' [2.9s]
+[2026-11-24T09:08:42.281977Z] INFO - Processed: 1 model
+[2026-11-24T09:08:42.281992Z] INFO - Summary: 1 total | 1 success
+[2026-11-24T09:08:42.289942Z] INFO - Command exited with return code 0
+[2026-11-24T09:08:42.290223Z] INFO - ::group::Post Execute
+[2026-11-24T09:08:42.290370Z] INFO - Pushing xcom ti=RuntimeTaskInstance(id=UUID('01a20cd0-501a-7f3c-9419-f65e007af7ec'), task_id='dbt_run_staging', dag_id='product_catalog_etl', run_id='manual__2026-11-24T09:08:28.284953+00:00', try_number=1, dag_version_id=UUID('01a20ad2-cfcc-775a-8846-d47b359b9a63'), map_index=-1, region_id=UUID('00000000-0000-0000-0000-000000000000'), region_index=-1, hostname='39b9a8bae8b4', context_carrier={'traceparent': '00-aeb67079668d1c8d1b69d9368d4f0cc2-3bbecb3a72cabc51-00'}, queue='default', task=<Task(BashOperator): dbt_run_staging>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 11, 24, 9, 8, 39, 309233, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='sentry_sdk.integrations.celery.CeleryIntegration') 
+[2026-11-24T09:08:42.303694Z] INFO - Task instance in success state
+[2026-11-24T09:08:42.303791Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNING
+[2026-11-24T09:08:42.304357Z] INFO - Task operator:<Task(BashOperator): dbt_run_staging>
+[2026-11-24T09:08:42.304355Z] INFO - ::endgroup::
+
+dbt_test_staging
+::group::Log message source details
+/opt/airflow/logs/dag_id=product_catalog_etl/run_id=manual__2026-11-24T09:08:28.284953+00:00/task_id=dbt_test_staging/attempt=1.log
+::endgroup::
+[2026-11-24T09:08:43.319061Z] INFO - ::group::Pre Execute
+Task Identity ti_id=01a20cd0-501b-7c80-8493-7d6ff3b071c3
+[2026-11-24T09:08:43.327571Z] INFO - DAG bundles loaded: dags-folder, example_dags, apache-airflow-providers-common-sql-example-dags, apache-airflow-providers-standard-example-dags
+[2026-11-24T09:08:43.328157Z] INFO - Filling up the DagBag from /opt/airflow/dags/product_catalog_etl.py
+[2026-11-24T09:08:43.333391Z] INFO - Worker startup parse complete bundle_name=dags-folder  bundle_version=null  dag_file=product_catalog_etl.py  bundle_prepare_ms=0  dag_file_parse_ms=5 
+[2026-11-24T09:08:43.343900Z] INFO - Task instance is in running state
+[2026-11-24T09:08:43.344632Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUED
+[2026-11-24T09:08:43.344702Z] INFO - Current task name:dbt_test_staging
+[2026-11-24T09:08:43.344767Z] INFO - Dag name:product_catalog_etl
+[2026-11-24T09:08:43.344535Z] INFO - ::endgroup::
+[2026-11-24T09:08:43.345150Z] INFO - Tmp dir root location: /tmp
+[2026-11-24T09:08:43.345583Z] INFO - Running command: ['/usr/python/bin/bash', '-c', 'set -euo pipefail\n/opt/airflow/dbt_venv/bin/dbt test --project-dir /opt/airflow/dbt/product_catalog --profiles-dir /opt/airflow/config --select stg_products']
+[2026-11-24T09:08:43.345845Z] INFO - Output:
+[2026-11-24T09:08:43.418721Z] INFO -        dbt 2.0.12
+[2026-11-24T09:08:43.419400Z] INFO -    Loading ../../config/profiles.yml
+[2026-11-24T09:08:43.421067Z] INFO -    Loading packages.yml
+[2026-11-24T09:08:44.459675Z] INFO -     Passed test  not_null_stg_products_name [3 of 4 in 0.93s]
+[2026-11-24T09:08:44.775903Z] INFO -     Passed test  not_null_stg_products_product_id [2 of 4 in 1.24s]
+[2026-11-24T09:08:44.888958Z] INFO -     Passed test  nonnegative_stg_prices [4 of 4 in 0.49s]
+[2026-11-24T09:08:45.029495Z] INFO -     Passed test  unique_stg_products_product_id [1 of 4 in 0.31s]
+[2026-11-24T09:08:45.169364Z] INFO - 
+[2026-11-24T09:08:45.169505Z] INFO - ==================== Execution Summary =====================
+[2026-11-24T09:08:45.169545Z] INFO - Finished 'test' successfully for target 'dev' [1.8s]
+[2026-11-24T09:08:45.169593Z] INFO - Processed: 4 tests
+[2026-11-24T09:08:45.169622Z] INFO - Summary: 4 total | 4 success
+[2026-11-24T09:08:45.181825Z] INFO - Command exited with return code 0
+[2026-11-24T09:08:45.182289Z] INFO - ::group::Post Execute
+[2026-11-24T09:08:45.182479Z] INFO - Pushing xcom ti=RuntimeTaskInstance(id=UUID('01a20cd0-501b-7c80-8493-7d6ff3b071c3'), task_id='dbt_test_staging', dag_id='product_catalog_etl', run_id='manual__2026-11-24T09:08:28.284953+00:00', try_number=1, dag_version_id=UUID('01a20ad2-cfcc-775a-8846-d47b359b9a63'), map_index=-1, region_id=UUID('00000000-0000-0000-0000-000000000000'), region_index=-1, hostname='39b9a8bae8b4', context_carrier={'traceparent': '00-aeb67079668d1c8d1b69d9368d4f0cc2-3bbecb3a72cabc51-00'}, queue='default', task=<Task(BashOperator): dbt_test_staging>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 11, 24, 9, 8, 43, 321304, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='sentry_sdk.integrations.celery.CeleryIntegration') 
+[2026-11-24T09:08:45.199392Z] INFO - Task instance in success state
+[2026-11-24T09:08:45.199499Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNING
+[2026-11-24T09:08:45.200127Z] INFO - Task operator:<Task(BashOperator): dbt_test_staging>
+[2026-11-24T09:08:45.200124Z] INFO - ::endgroup::
+
+dbt_snapshot
+::group::Log message source details
+/opt/airflow/logs/dag_id=product_catalog_etl/run_id=manual__2026-11-24T09:08:28.284953+00:00/task_id=dbt_snapshot/attempt=1.log
+::endgroup::
+[2026-11-24T09:08:45.436212Z] INFO - ::group::Pre Execute
+Task Identity ti_id=01a20cd0-501c-76dc-bf23-bcc2c00b3ce1
+[2026-11-24T09:08:45.444279Z] INFO - DAG bundles loaded: dags-folder, example_dags, apache-airflow-providers-common-sql-example-dags, apache-airflow-providers-standard-example-dags
+[2026-11-24T09:08:45.444863Z] INFO - Filling up the DagBag from /opt/airflow/dags/product_catalog_etl.py
+[2026-11-24T09:08:45.448951Z] INFO - Worker startup parse complete bundle_name=dags-folder  bundle_version=null  dag_file=product_catalog_etl.py  bundle_prepare_ms=0  dag_file_parse_ms=4 
+[2026-11-24T09:08:45.458775Z] INFO - Task instance is in running state
+[2026-11-24T09:08:45.458845Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUED
+[2026-11-24T09:08:45.458891Z] INFO - Current task name:dbt_snapshot
+[2026-11-24T09:08:45.458938Z] INFO - Dag name:product_catalog_etl
+[2026-11-24T09:08:45.458632Z] INFO - ::endgroup::
+[2026-11-24T09:08:45.459228Z] INFO - Tmp dir root location: /tmp
+[2026-11-24T09:08:45.459626Z] INFO - Running command: ['/usr/python/bin/bash', '-c', 'set -euo pipefail\n/opt/airflow/dbt_venv/bin/dbt snapshot --project-dir /opt/airflow/dbt/product_catalog --profiles-dir /opt/airflow/config --select products_snapshot']
+[2026-11-24T09:08:45.459980Z] INFO - Output:
+[2026-11-24T09:08:45.530064Z] INFO -        dbt 2.0.12
+[2026-11-24T09:08:45.530693Z] INFO -    Loading ../../config/profiles.yml
+[2026-11-24T09:08:45.532290Z] INFO -    Loading packages.yml
+[2026-11-24T09:08:51.975896Z] INFO -  Succeeded snapshot SNAPSHOTS.products_snapshot (snapshot) [1 of 1 in 5.17s]
+[2026-11-24T09:08:52.103209Z] INFO - 
+[2026-11-24T09:08:52.103432Z] INFO - ==================== Execution Summary =====================
+[2026-11-24T09:08:52.103484Z] INFO - Finished 'snapshot' successfully for target 'dev' [6.6s]
+[2026-11-24T09:08:52.103513Z] INFO - Processed: 1 snapshot
+[2026-11-24T09:08:52.103540Z] INFO - Summary: 1 total | 1 success
+[2026-11-24T09:08:52.119847Z] INFO - Command exited with return code 0
+[2026-11-24T09:08:52.120248Z] INFO - ::group::Post Execute
+[2026-11-24T09:08:52.120394Z] INFO - Pushing xcom ti=RuntimeTaskInstance(id=UUID('01a20cd0-501c-76dc-bf23-bcc2c00b3ce1'), task_id='dbt_snapshot', dag_id='product_catalog_etl', run_id='manual__2026-11-24T09:08:28.284953+00:00', try_number=1, dag_version_id=UUID('01a20ad2-cfcc-775a-8846-d47b359b9a63'), map_index=-1, region_id=UUID('00000000-0000-0000-0000-000000000000'), region_index=-1, hostname='39b9a8bae8b4', context_carrier={'traceparent': '00-aeb67079668d1c8d1b69d9368d4f0cc2-3bbecb3a72cabc51-00'}, queue='default', task=<Task(BashOperator): dbt_snapshot>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 11, 24, 9, 8, 45, 439240, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='sentry_sdk.integrations.celery.CeleryIntegration') 
+[2026-11-24T09:08:52.137095Z] INFO - Task instance in success state
+[2026-11-24T09:08:52.137191Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNING
+[2026-11-24T09:08:52.137755Z] INFO - Task operator:<Task(BashOperator): dbt_snapshot>
+[2026-11-24T09:08:52.137750Z] INFO - ::endgroup::
+
+dbt_run_dimension
+::group::Log message source details
+/opt/airflow/logs/dag_id=product_catalog_etl/run_id=manual__2026-11-24T09:08:28.284953+00:00/task_id=dbt_run_dimension/attempt=1.log
+::endgroup::
+[2026-11-24T09:08:52.375195Z] INFO - ::group::Pre Execute
+Task Identity ti_id=01a20cd0-501d-7668-9b9d-3f63e3fc919b
+[2026-11-24T09:08:52.383181Z] INFO - DAG bundles loaded: dags-folder, example_dags, apache-airflow-providers-common-sql-example-dags, apache-airflow-providers-standard-example-dags
+[2026-11-24T09:08:52.383863Z] INFO - Filling up the DagBag from /opt/airflow/dags/product_catalog_etl.py
+[2026-11-24T09:08:52.387963Z] INFO - Worker startup parse complete bundle_name=dags-folder  bundle_version=null  dag_file=product_catalog_etl.py  bundle_prepare_ms=0  dag_file_parse_ms=4 
+[2026-11-24T09:08:52.397220Z] INFO - Task instance is in running state
+[2026-11-24T09:08:52.397892Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUED
+[2026-11-24T09:08:52.397956Z] INFO - Current task name:dbt_run_dimension
+[2026-11-24T09:08:52.397809Z] INFO - ::endgroup::
+[2026-11-24T09:08:52.398022Z] INFO - Dag name:product_catalog_etl
+[2026-11-24T09:08:52.398397Z] INFO - Tmp dir root location: /tmp
+[2026-11-24T09:08:52.398772Z] INFO - Running command: ['/usr/python/bin/bash', '-c', 'set -euo pipefail\n/opt/airflow/dbt_venv/bin/dbt run --project-dir /opt/airflow/dbt/product_catalog --profiles-dir /opt/airflow/config --select dim_products_history']
+[2026-11-24T09:08:52.399041Z] INFO - Output:
+[2026-11-24T09:08:52.470664Z] INFO -        dbt 2.0.12
+[2026-11-24T09:08:52.471312Z] INFO -    Loading ../../config/profiles.yml
+[2026-11-24T09:08:52.472715Z] INFO -    Loading packages.yml
+[2026-11-24T09:08:55.210428Z] INFO -  Succeeded model CORE.dim_products_history (table) [1 of 1 in 1.35s]
+[2026-11-24T09:08:55.359898Z] INFO - 
+[2026-11-24T09:08:55.359991Z] INFO - ==================== Execution Summary =====================
+[2026-11-24T09:08:55.360026Z] INFO - Finished 'run' successfully for target 'dev' [2.9s]
+[2026-11-24T09:08:55.360045Z] INFO - Processed: 1 model
+[2026-11-24T09:08:55.360063Z] INFO - Summary: 1 total | 1 success
+[2026-11-24T09:08:55.368216Z] INFO - Command exited with return code 0
+[2026-11-24T09:08:55.368512Z] INFO - ::group::Post Execute
+[2026-11-24T09:08:55.368643Z] INFO - Pushing xcom ti=RuntimeTaskInstance(id=UUID('01a20cd0-501d-7668-9b9d-3f63e3fc919b'), task_id='dbt_run_dimension', dag_id='product_catalog_etl', run_id='manual__2026-11-24T09:08:28.284953+00:00', try_number=1, dag_version_id=UUID('01a20ad2-cfcc-775a-8846-d47b359b9a63'), map_index=-1, region_id=UUID('00000000-0000-0000-0000-000000000000'), region_index=-1, hostname='39b9a8bae8b4', context_carrier={'traceparent': '00-aeb67079668d1c8d1b69d9368d4f0cc2-3bbecb3a72cabc51-00'}, queue='default', task=<Task(BashOperator): dbt_run_dimension>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 11, 24, 9, 8, 52, 377634, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='sentry_sdk.integrations.celery.CeleryIntegration') 
+[2026-11-24T09:08:55.382058Z] INFO - Task instance in success state
+[2026-11-24T09:08:55.382144Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNING
+[2026-11-24T09:08:55.382687Z] INFO - Task operator:<Task(BashOperator): dbt_run_dimension>
+[2026-11-24T09:08:55.382690Z] INFO - ::endgroup::
+
+dbt_test_all
+::group::Log message source details
+/opt/airflow/logs/dag_id=product_catalog_etl/run_id=manual__2026-11-24T09:08:28.284953+00:00/task_id=dbt_test_all/attempt=1.log
+::endgroup::
+[2026-11-24T09:08:55.719680Z] INFO - ::group::Pre Execute
+Task Identity ti_id=01a20cd0-501e-798f-9507-1339b17cf779
+[2026-11-24T09:08:55.728544Z] INFO - DAG bundles loaded: dags-folder, example_dags, apache-airflow-providers-common-sql-example-dags, apache-airflow-providers-standard-example-dags
+[2026-11-24T09:08:55.729125Z] INFO - Filling up the DagBag from /opt/airflow/dags/product_catalog_etl.py
+[2026-11-24T09:08:55.734055Z] INFO - Worker startup parse complete bundle_name=dags-folder  bundle_version=null  dag_file=product_catalog_etl.py  bundle_prepare_ms=0  dag_file_parse_ms=4 
+[2026-11-24T09:08:55.745233Z] INFO - Task instance is in running state
+[2026-11-24T09:08:55.745317Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUED
+[2026-11-24T09:08:55.745365Z] INFO - Current task name:dbt_test_all
+[2026-11-24T09:08:55.745408Z] INFO - Dag name:product_catalog_etl
+[2026-11-24T09:08:55.745035Z] INFO - ::endgroup::
+[2026-11-24T09:08:55.745726Z] INFO - Tmp dir root location: /tmp
+[2026-11-24T09:08:55.746226Z] INFO - Running command: ['/usr/python/bin/bash', '-c', 'set -euo pipefail\n/opt/airflow/dbt_venv/bin/dbt test --project-dir /opt/airflow/dbt/product_catalog --profiles-dir /opt/airflow/config']
+[2026-11-24T09:08:55.746602Z] INFO - Output:
+[2026-11-24T09:08:55.820663Z] INFO -        dbt 2.0.12
+[2026-11-24T09:08:55.821375Z] INFO -    Loading ../../config/profiles.yml
+[2026-11-24T09:08:55.822950Z] INFO -    Loading packages.yml
+[2026-11-24T09:08:57.075888Z] INFO -     Passed test  source_not_null_raw_raw_products_PRODUCT_ID [3 of 10 in 1.14s]
+[2026-11-24T09:08:57.114614Z] INFO -     Passed test  nonnegative_stg_prices [9 of 10 in 1.18s]
+[2026-11-24T09:08:57.246492Z] INFO -     Passed test  not_null_stg_products_name [5 of 10 in 0.23s]
+[2026-11-24T09:08:57.373070Z] INFO -     Passed test  not_null_dim_products_history_product_id [8 of 10 in 0.32s]
+[2026-11-24T09:08:57.462058Z] INFO -     Passed test  not_null_dim_products_history_valid_from [6 of 10 in 0.27s]
+[2026-11-24T09:08:57.529105Z] INFO -     Passed test  not_null_stg_products_product_id [4 of 10 in 0.21s]
+[2026-11-24T09:08:57.650043Z] INFO -     Passed test  unique_stg_products_product_id [1 of 10 in 0.24s]
+[2026-11-24T09:08:57.748480Z] INFO -     Passed test  unique_dim_products_history_product_version_key [2 of 10 in 0.28s]
+[2026-11-24T09:08:57.805141Z] INFO -     Passed test  not_null_dim_products_history_product_version_key [7 of 10 in 0.21s]
+[2026-11-24T09:08:57.921652Z] INFO -     Passed test  accepted_values_dim_products_history_is_current__True__False [10 of 10 in 0.23s]
+[2026-11-24T09:08:58.069576Z] INFO - 
+[2026-11-24T09:08:58.069650Z] INFO - ==================== Execution Summary =====================
+[2026-11-24T09:08:58.069668Z] INFO - Finished 'test' successfully for target 'dev' [2.2s]
+[2026-11-24T09:08:58.069684Z] INFO - Processed: 10 tests
+[2026-11-24T09:08:58.069702Z] INFO - Summary: 10 total | 10 success
+[2026-11-24T09:08:58.077195Z] INFO - Command exited with return code 0
+[2026-11-24T09:08:58.077447Z] INFO - ::group::Post Execute
+[2026-11-24T09:08:58.077533Z] INFO - Pushing xcom ti=RuntimeTaskInstance(id=UUID('01a20cd0-501e-798f-9507-1339b17cf779'), task_id='dbt_test_all', dag_id='product_catalog_etl', run_id='manual__2026-11-24T09:08:28.284953+00:00', try_number=1, dag_version_id=UUID('01a20ad2-cfcc-775a-8846-d47b359b9a63'), map_index=-1, region_id=UUID('00000000-0000-0000-0000-000000000000'), region_index=-1, hostname='39b9a8bae8b4', context_carrier={'traceparent': '00-aeb67079668d1c8d1b69d9368d4f0cc2-3bbecb3a72cabc51-00'}, queue='default', task=<Task(BashOperator): dbt_test_all>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 11, 24, 9, 8, 55, 722344, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='sentry_sdk.integrations.celery.CeleryIntegration') 
+[2026-11-24T09:08:58.091180Z] INFO - Task instance in success state
+[2026-11-24T09:08:58.091291Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNING
+[2026-11-24T09:08:58.091708Z] INFO - Task operator:<Task(BashOperator): dbt_test_all>
+[2026-11-24T09:08:58.091697Z] INFO - ::endgroup::
+
+run_dev_feature
+::group::Log message source details
+/opt/airflow/logs/dag_id=product_catalog_clone_dag/run_id=manual__2026-11-24T22:00:17.823213+00:00/task_id=run_dev_feature/attempt=1.log
+::endgroup::
+[2026-11-24T22:00:30.128039Z] INFO - ::group::Pre Execute
+Task Identity ti_id=01a20f92-f0b6-7925-9807-164e2449cdfd
+[2026-11-24T22:00:30.138087Z] INFO - DAG bundles loaded: dags-folder, example_dags, apache-airflow-providers-common-sql-example-dags, apache-airflow-providers-standard-example-dags
+[2026-11-24T22:00:30.138670Z] INFO - Filling up the DagBag from /opt/airflow/dags/product_catalog_clone_dag.py
+[2026-11-24T22:00:30.142875Z] INFO - Worker startup parse complete bundle_name=dags-folder  bundle_version=null  dag_file=product_catalog_clone_dag.py  bundle_prepare_ms=0  dag_file_parse_ms=4 
+[2026-11-24T22:00:30.152760Z] INFO - Task instance is in running state
+[2026-11-24T22:00:30.152852Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUED
+[2026-11-24T22:00:30.152898Z] INFO - Current task name:run_dev_feature
+[2026-11-24T22:00:30.152937Z] INFO - Dag name:product_catalog_clone_dag
+[2026-11-24T22:00:30.152576Z] INFO - ::endgroup::
+[2026-11-24T22:00:30.153210Z] INFO - Tmp dir root location: /tmp
+[2026-11-24T22:00:30.153596Z] INFO - Running command: ['/usr/python/bin/bash', '-c', 'set -euo pipefail\ncd /opt/airflow/dbt/product_catalog && /opt/airflow/dbt_venv/bin/dbt run --target dev_clone --profiles-dir /opt/airflow/config --select product_rating_experiment']
+[2026-11-24T22:00:30.153875Z] INFO - Output:
+[2026-11-24T22:00:30.225737Z] INFO -        dbt 2.0.12
+[2026-11-24T22:00:30.226748Z] INFO -    Loading ../../config/profiles.yml
+[2026-11-24T22:00:30.228998Z] INFO -    Loading packages.yml
+[2026-11-24T22:00:33.254497Z] INFO -  Succeeded model CORE.product_rating_experiment (table) [1 of 1 in 1.87s]
+[2026-11-24T22:00:33.330260Z] INFO - New version available 2.0.13 (run `dbt system update`)
+[2026-11-24T22:00:33.426023Z] INFO - 
+[2026-11-24T22:00:33.426171Z] INFO - ==================== Execution Summary =====================
+[2026-11-24T22:00:33.426202Z] INFO - Finished 'run' successfully for target 'dev_clone' [3.2s]
+[2026-11-24T22:00:33.426225Z] INFO - Processed: 1 model
+[2026-11-24T22:00:33.426245Z] INFO - Summary: 1 total | 1 success
+[2026-11-24T22:00:33.437056Z] INFO - Command exited with return code 0
+[2026-11-24T22:00:33.437357Z] INFO - ::group::Post Execute
+[2026-11-24T22:00:33.437473Z] INFO - Pushing xcom ti=RuntimeTaskInstance(id=UUID('01a20f92-f0b6-7925-9807-164e2449cdfd'), task_id='run_dev_feature', dag_id='product_catalog_clone_dag', run_id='manual__2026-11-24T22:00:17.823213+00:00', try_number=1, dag_version_id=UUID('01a20f0f-217f-7f59-9a7f-3210051c5fde'), map_index=-1, region_id=UUID('00000000-0000-0000-0000-000000000000'), region_index=-1, hostname='39b9a8bae8b4', context_carrier={'traceparent': '00-9792ce47d21568acfd8b12c3860e8965-b64533debde119b5-00'}, queue='default', task=<Task(BashOperator): run_dev_feature>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 11, 24, 22, 0, 30, 132857, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='sentry_sdk.integrations.celery.CeleryIntegration') 
+[2026-11-24T22:00:33.452166Z] INFO - Task instance in success state
+[2026-11-24T22:00:33.452275Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNING
+[2026-11-24T22:00:33.452371Z] INFO - Task operator:<Task(BashOperator): run_dev_feature>
+[2026-11-24T22:00:33.452280Z] INFO - ::endgroup::

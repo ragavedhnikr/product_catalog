@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ target.database }}"
+    schema: RAW
+
+    tables:
+      - name: raw_products
+        description: "Raw normalized product catalog loaded by the ingestion script."
+
+        columns:
+          - name: PRODUCT_ID
+            description: "Stable product identifier from pid."
+            data_tests:
+              - not_null

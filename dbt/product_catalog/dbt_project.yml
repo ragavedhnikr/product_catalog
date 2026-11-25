@@ -1,0 +1,39 @@
+name: product_catalog
+version: "1.0.0"
+config-version: 2
+
+profile: product_catalog
+
+model-paths:
+  - models
+
+snapshot-paths:
+  - snapshots
+
+test-paths:
+  - tests
+
+macro-paths:
+  - macros
+
+clean-targets:
+  - target
+  - dbt_packages
+
+models:
+  product_catalog:
+    staging:
+      +schema: STAGING
+      +materialized: view
+
+    marts:
+      +schema: CORE
+      +materialized: table
+      
+    dev:
+      +schema: CORE
+      +materialized: table
+
+snapshots:
+  product_catalog:
+    +schema: SNAPSHOTS

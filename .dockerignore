@@ -1,0 +1,7 @@
+.git
+.env
+data/
+logs/
+evidence/
+secrets/
+config/profiles.yml

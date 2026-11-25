@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_products_history
+    description: "SCD Type 2 product history built from the dbt snapshot."
+
+    columns:
+      - name: product_version_key
+        description: "Unique identifier for one version of a product."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_id
+        description: "Stable product business key."
+        data_tests:
+          - not_null
+
+      - name: is_current
+        description: "True for the current version of each product."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+
+      - name: valid_from
+        data_tests:
+          - not_null
